@@ -19,6 +19,12 @@ struct Routine: Codable, Hashable, Identifiable{
     var numActivities: Int {
         activities.count
     }
+
+    init(id: UUID = UUID(), name: String = "", activities: [Activity] = []) {
+        self.id = id
+        self.name = name
+        self.activities = activities
+    }
     
     init(name: String, activities: [Activity]) {
         self.name = name

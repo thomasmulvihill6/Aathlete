@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityHome: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @State var tabIndex = 0
 
     var body: some View {

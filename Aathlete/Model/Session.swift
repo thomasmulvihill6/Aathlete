@@ -7,12 +7,21 @@
 
 import Foundation
 
+@Observable
 class Session: Hashable, Identifiable, ObservableObject{
     var id = UUID()
     var routine: Routine
     var name: String
     var date: Date
     var exercises: [Exercise]
+
+    init(id: UUID = UUID(), routine: Routine = Routine(), name: String = "", date: Date = Date(), exercises: [Exercise] = []) {
+        self.id = id
+        self.routine = routine
+        self.name = name
+        self.date = date
+        self.exercises = exercises
+    }
     
     init(routine: Routine, name: String, exercises: [Exercise]){
         self.routine = routine

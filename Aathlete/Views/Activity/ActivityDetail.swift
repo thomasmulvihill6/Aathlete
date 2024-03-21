@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityDetail: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     var activity: Activity
 
     var activityIndex: Int {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityList: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @State private var showFavouritesOnly = false
     
     var filteredActivities: [Activity] {

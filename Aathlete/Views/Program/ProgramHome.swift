@@ -10,13 +10,17 @@ import SwiftUI
 struct ProgramHome: View {
     @EnvironmentObject var modelData: ModelData
     @State private var routine: Routine
-    @State private var draftSession = Session.default
+    @State private var draftSession = Session()
 
     init() {
         self._routine = State(initialValue: Routine(name: "Leg Day", activities: ModelData().legDayAActivities()))
     }
     
     var body: some View {   
+        // When start new session, add session instance to sessions array
+        // Pass in a blank session, when done and hit save session, add it to sessions array
+        // 1. create new session = Session()
+        // 2. Pass session into child view
         NavigationStack{
             Text("Today")
                 .underline()

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import CodableFiles
 
+@Obserable
 class ModelData: ObservableObject{
     static let codableFiles = CodableFiles.shared
 

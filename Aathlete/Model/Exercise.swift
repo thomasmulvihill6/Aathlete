@@ -7,6 +7,7 @@
 
 import Foundation
 
+@Observable
 class Exercise: Hashable, Identifiable {
     var id = UUID()
     var session: Session
@@ -16,7 +17,7 @@ class Exercise: Hashable, Identifiable {
     var repetitions: Int
     var weight: Int? = 0
     var time: Int? = 0
-    @Published var isComplete: Bool = false
+    var isComplete: Bool = false
 
     static let `default` = Exercise(session: Session.default, activity: ModelData().activities[0], name: "default", sets: 3, repetitions: 8)
     

@@ -9,27 +9,30 @@ import SwiftUI
 
 struct ProgramHome: View {
     @EnvironmentObject var modelData: ModelData
-    @State var routine: Routine
-    
+    @State private var routine: Routine
+    @State private var draftSession = Session.default
+
     init() {
-        _routine = State(initialValue: Routine(name: "Leg Day", activities: ModelData().legDayAActivities()))
+        self._routine = State(initialValue: Routine(name: "Leg Day", activities: ModelData().legDayAActivities()))
     }
     
-    var body: some View {        
+    var body: some View {   
         NavigationStack{
             Text("Today")
                 .underline()
                 .font(.title)
             NavigationLink{
-                ProgramSession(routine: $routine)
+                ProgramSession(routine: $routine, draftSession: $draftSession)
                     .environmentObject(modelData)
             } label: {
                 ProgramSessionSummary()
                     .foregroundStyle(Color.black)
             }
-            .onTapGesture {
+            .onAppear() {
+                draftSession = Session(routine: routine)
                 modelData.sessions.append(Session(routine: routine))
             }
+
 
             Text("Rest of the Week")
                 .underline()

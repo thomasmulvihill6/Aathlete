@@ -10,6 +10,7 @@
 		070F96072B6FFEF900514C32 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070F96062B6FFEF900514C32 /* ActivityRow.swift */; };
 		0711924E2BAA195500A7063E /* Aathlete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0711924C2BAA195500A7063E /* Aathlete.xcdatamodeld */; };
 		071192522BAA849100A7063E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071192512BAA849100A7063E /* Session.swift */; };
+		071192542BAC868100A7063E /* SaveSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071192532BAC868100A7063E /* SaveSessionButton.swift */; };
 		071E56ED2B6087CA00C26642 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E56EC2B6087CA00C26642 /* CategoryHome.swift */; };
 		071E56EF2B608A6900C26642 /* BackgroundExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E56EE2B608A6900C26642 /* BackgroundExerciseView.swift */; };
 		071E56F12B6090F900C26642 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E56F02B6090F900C26642 /* Activity.swift */; };
@@ -92,6 +93,7 @@
 		070F96062B6FFEF900514C32 /* ActivityRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		0711924D2BAA195500A7063E /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
 		071192512BAA849100A7063E /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		071192532BAC868100A7063E /* SaveSessionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveSessionButton.swift; sourceTree = "<group>"; };
 		071E56EC2B6087CA00C26642 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		071E56EE2B608A6900C26642 /* BackgroundExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExerciseView.swift; sourceTree = "<group>"; };
 		071E56F02B6090F900C26642 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				074493B12B97B992003F5D6A /* ProgramSession.swift */,
 				074493B52B97B9F4003F5D6A /* ProgramSessionSummary.swift */,
 				074493B72B97BA36003F5D6A /* DailyQuote.swift */,
+				071192532BAC868100A7063E /* SaveSessionButton.swift */,
 				0775F9932B97FD1900074F8E /* ProgramExerciseRow.swift */,
 				0775F9972B98088700074F8E /* EditExerciseForm.swift */,
 				074493B32B97B9E3003F5D6A /* WeeklySplitSummary.swift */,
@@ -559,6 +562,7 @@
 				07346B202B7C0A79009DE842 /* WorkoutBadge.swift in Sources */,
 				077B16C92B894F4C00B7C607 /* AssignDefaultImage.swift in Sources */,
 				0793BB8E2B57160400D1043E /* AathleteApp.swift in Sources */,
+				071192542BAC868100A7063E /* SaveSessionButton.swift in Sources */,
 				07346B162B7C0319009DE842 /* BadgeBackground.swift in Sources */,
 				077B16BB2B890DE300B7C607 /* PageViewController.swift in Sources */,
 				077B16D52B8A909700B7C607 /* WorkoutAdd.swift in Sources */,

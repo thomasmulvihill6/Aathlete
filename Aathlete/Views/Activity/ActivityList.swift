@@ -46,5 +46,5 @@ struct ActivityList: View {
 
 #Preview {
     ActivityList()
-        .environmentObject(ModelData())
+        .environment(ModelData())
 }

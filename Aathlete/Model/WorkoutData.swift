@@ -13,7 +13,8 @@ let codableFiles = CodableFiles.shared
 @Observable
 class WorkoutData: ObservableObject{
     static let workoutsFilename = "workoutData.json"
-    
+    var showTopPicker = true
+
     var allWorkouts: [workoutOld] = load(workoutsFilename)
     var config = WorkoutEditorConfig.default
     

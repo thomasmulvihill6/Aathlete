@@ -23,5 +23,5 @@ struct PageView<Page: View>: View {
 }
 
 #Preview {
-    PageView(pages: ModelData().features.map { FeatureCard(activity: $0).environmentObject(ModelData()) })
+    PageView(pages: ModelData().features.map { FeatureCard(activity: $0).environment(ModelData()) })
 }

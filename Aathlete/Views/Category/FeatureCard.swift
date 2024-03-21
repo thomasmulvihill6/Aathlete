@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FeatureCard: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     var activity: Activity
     
     var body: some View {
-        NavigationLink(destination: ActivityDetail(activity: activity).environmentObject(modelData)) {
+        NavigationLink(destination: ActivityDetail(activity: activity).environment(modelData)) {
             activity.featureImage?
                 .resizable()
                 .overlay {
@@ -50,5 +50,5 @@ struct TextOverlay: View {
 
 #Preview {
     FeatureCard( activity: ModelData().features[0])
-        .aspectRatio(3 / 2, contentMode: .fit).environmentObject(ModelData())
+        .aspectRatio(3 / 2, contentMode: .fit).environment(ModelData())
 }

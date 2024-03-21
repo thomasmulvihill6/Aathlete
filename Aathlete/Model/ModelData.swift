@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 import CodableFiles
 
-@Obserable
+@Observable
 class ModelData: ObservableObject{
     static let codableFiles = CodableFiles.shared
 
     var activities: [Activity] = load("activities.json")
-    @Published var sessions: [Session] = []
+    var sessions: [Session] = []
     var exercises: [Exercise] = []
     var routines: [Routine] = []
     

@@ -16,7 +16,7 @@ struct ActivityDetail: View {
     }
 
     var body: some View {
-        @ObservedObject var modelData = modelData
+        @State var modelData = modelData
         ScrollView {
             BackgroundExerciseView(activity: activity)
             
@@ -53,5 +53,5 @@ struct ActivityDetail: View {
 #Preview {
     let modelData = ModelData()
     return ActivityDetail(activity: ModelData().activities[43])
-        .environmentObject(modelData)
+        .environment(modelData)
 }

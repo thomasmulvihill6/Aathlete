@@ -15,12 +15,12 @@ struct ActivityHome: View {
         ZStack(alignment: .top){
             if tabIndex == 0 {
                 CategoryHome()
-                    .environmentObject(modelData)
+                    .environment(modelData)
                     .padding(.top, 10)
             }
             else {
                 ActivityList()
-                    .environmentObject(modelData)
+                    .environment(modelData)
                     .padding(.top, 10)
             }
             
@@ -38,5 +38,5 @@ struct ActivityHome: View {
 
 #Preview {
     ActivityHome()
-        .environmentObject(ModelData())
+        .environment(ModelData())
 }

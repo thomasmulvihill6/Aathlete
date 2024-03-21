@@ -8,7 +8,7 @@
 //import SwiftUI
 //
 //struct ProgramExerciseRow: View {
-//    @EnvironmentObject var modelData: ModelData
+//    @Environment(ModelData.self) private var modelData
 //    let exercise: Activity
 //    var exerciseIndex: Int {
 //        modelData.activities.firstIndex(where: { $0.id == exercise.id})!
@@ -29,8 +29,8 @@
 //    let modelData = ModelData()
 //    return Group{
 //        ProgramExerciseRow(exercise: exercises[2])
-//            .environmentObject(modelData)
+//            .environment(modelData)
 //        ProgramExerciseRow(exercise: exercises[3])
-//            .environmentObject(modelData)
+//            .environment(modelData)
 //    }
 //}

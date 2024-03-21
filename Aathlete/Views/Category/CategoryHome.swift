@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryHome: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @State private var showingProfile = false
     
     var body: some View {
@@ -16,7 +16,7 @@ struct CategoryHome: View {
             NavigationSplitView {
                 List {
                     // "Featured Exercises" are show here. Can swipe through to see what exercises are featured.
-                    PageView(pages: modelData.features.map { FeatureCard(activity: $0).environmentObject(modelData) })
+                    PageView(pages: modelData.features.map { FeatureCard(activity: $0).environment(modelData) })
                         .listRowInsets(EdgeInsets())
 
                     
@@ -38,7 +38,7 @@ struct CategoryHome: View {
                 .navigationTitle("Featured")
                 .sheet(isPresented: $showingProfile){
                     ProfileHost()
-                        .environmentObject(modelData)
+                        .environment(modelData)
                 }
             } detail: {
                 Text("Select an Exercise")
@@ -49,5 +49,5 @@ struct CategoryHome: View {
 
 #Preview {
     CategoryHome()
-        .environmentObject(ModelData())
+        .environment(ModelData())
 }

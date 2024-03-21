@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct SettingsHome: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @Environment(WorkoutData.self) var workoutData
     var body: some View {
         ProfileHost()
-            .environmentObject(modelData)
+            .environment(modelData)
             .environment(workoutData)
     }
 }
 
 #Preview {
     SettingsHome()
-        .environmentObject(ModelData())
+        .environment(ModelData())
         .environment(WorkoutData())
 }

@@ -23,6 +23,22 @@ struct Activity: Hashable, Codable, Identifiable {
     var isFeatured: Bool = false
     var isComplete: Bool = false
     
+    init(id: UUID = UUID(), name: String = "", force: String = "", level: String = "", mechanic: String = "", equipment: String = "", primaryMuscles: [String] = [], secondaryMuscles: [String] = [], instructions: [String] = [], category: String = "", isFavourite: Bool = false, isFeatured: Bool = false, isComplete: Bool = false){
+        self.name = name
+        self.force = force
+        self.level = level
+        self.mechanic = mechanic
+        self.equipment = equipment
+        self.primaryMuscles = primaryMuscles
+        self.secondaryMuscles = secondaryMuscles
+        self.instructions = instructions
+        self.category = category
+        self.isFavourite = isFavourite
+        self.isFeatured = isFeatured
+        self.isComplete = isComplete
+
+    }
+    
     private var imageName: String?
     var image: Image {
         if let imageName = imageName {

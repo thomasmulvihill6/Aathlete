@@ -17,7 +17,7 @@ struct AathleteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelData)
+                .environment(modelData)
                 .environment(workoutData)
         }
         .commands{

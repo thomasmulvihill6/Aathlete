@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Tab = .program
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @Environment(WorkoutData.self) var workoutData
     
     // Declares an enum for the different tabs along the bottom of content view
@@ -25,13 +25,13 @@ struct ContentView: View {
         // Create a tab along the bottom of the view where different pages/views can be added
         TabView(selection: $selection){
             ProgramHome()
-                .environmentObject(modelData)
+                .environment(modelData)
                 .tabItem {
                     Label("My Program", systemImage: "figure.run")
                 }
                 .tag(Tab.program)
             ActivityHome()
-                .environmentObject(modelData)
+                .environment(modelData)
                 .tabItem {
                     Label("Exercises", systemImage: "dumbbell.fill")
                 }
@@ -53,6 +53,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(ModelData())
+        .environment(ModelData())
         .environment(WorkoutData())
 }

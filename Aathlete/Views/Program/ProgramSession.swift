@@ -8,50 +8,45 @@
 import SwiftUI
 
 struct ProgramSession: View {
-    @EnvironmentObject var modelData: ModelData
-    @Binding var routine: Routine
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(ModelData.self) private var modelData
     @Binding var draftSession: Session
-
+    @State private var draftExercise = Exercise()
+    
     var body: some View {
-//        add draftSession to modelData
-//        Make changes to draftSession (& ensure changes persist through modelData)
-//        When leave, save draftSession
+        //        add draftSession to modelData
+        //        Make changes to draftSession (& ensure changes persist through modelData)
+        //        When leave, save draftSession
+        @State var modelData = modelData
         
-        @ObservedObject var modelData = modelData
-        if let session = modelData.getSession(routine: routine),
-           let sessionIndex = modelData.sessions.firstIndex(of: session){
+        HStack{
             Text("Leg Day A")
-            List{
-                Section{
-                    ForEach($modelData.sessions[sessionIndex].exercises.indices, id: \.self) { index in
-                        let exerciseBinding = $modelData.sessions[sessionIndex].exercises[index]
-                        NavigationLink(destination: EditExerciseForm(exercise: $modelData.sessions[sessionIndex].exercises[index])) {
-                            HStack{
-                                Text($modelData.sessions[sessionIndex].exercises[index].name.wrappedValue)
-                                Spacer()
-                                CompleteButton(isSet: $modelData.sessions[sessionIndex].exercises[index].isComplete)
-                            
-    //                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-    //                            Button {
-    //                                withAnimation{
-    //                                    session.exercises[index].isComplete.toggle()
-    //                                }
-    //                            } label: {
-    //                                Image(systemName: "checkmark.circle")
-    //                                    .font(.system(size: 22))
-    //                            }
-    //                            .tint(.green)
-                            }
+        }
+        List{
+            Section{
+                ForEach($draftSession.exercises.indices, id: \.self) { index in
+                    NavigationLink(destination: EditExerciseForm(exercise: $draftSession.exercises[index])) {
+                        HStack{
+                            Text($draftSession.exercises[index].name.wrappedValue)
+                            Spacer()
+                            CompleteButton(isSet: $draftSession.exercises[index].isComplete)
                         }
                     }
                 }
             }
-            Section{
-                SaveSessionButton()
-            }
-            .listRowBackground(Color.clear)
-
         }
+        .toolbar{
+            // Add a profile button in the top right corner (toolbar) , where a user can change their settings.
+            Button {
+                modelData.sessions.append(draftSession)
+                self.presentationMode.wrappedValue.dismiss()
+                // save to Session
+                // return to programHome
+            } label: {
+                Label("Save", systemImage: "checkmark")
+            }
+        }
+        
     }
 }
 
@@ -59,6 +54,6 @@ struct ProgramSession: View {
     let routine = Routine(name: "Leg Day", activities: ModelData().legDayAActivities())
     let modelData = ModelData()
     var draftSession = Session(routine: routine)
-    return ProgramSession(routine: .constant(routine), draftSession: .constant(draftSession))
-        .environmentObject(modelData)
+    return ProgramSession(draftSession: .constant(draftSession))
+        .environment(modelData)
 }

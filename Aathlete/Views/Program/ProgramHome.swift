@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgramHome: View {
-    @EnvironmentObject var modelData: ModelData
+    @Environment(ModelData.self) private var modelData
     @State private var routine: Routine
     @State private var draftSession = Session()
 
@@ -26,17 +26,15 @@ struct ProgramHome: View {
                 .underline()
                 .font(.title)
             NavigationLink{
-                ProgramSession(routine: $routine, draftSession: $draftSession)
-                    .environmentObject(modelData)
+                ProgramSession(draftSession: $draftSession)
+                    .environment(modelData)
             } label: {
                 ProgramSessionSummary()
                     .foregroundStyle(Color.black)
             }
             .onAppear() {
                 draftSession = Session(routine: routine)
-                modelData.sessions.append(Session(routine: routine))
             }
-
 
             Text("Rest of the Week")
                 .underline()
@@ -56,5 +54,5 @@ struct ProgramHome: View {
 
 #Preview {
     ProgramHome()
-        .environmentObject(ModelData())
+        .environment(ModelData())
 }

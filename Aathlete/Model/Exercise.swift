@@ -18,11 +18,17 @@ class Exercise: Hashable, Identifiable {
     var weight: Int? = 0
     var time: Int? = 0
     var isComplete: Bool = false
+    var saveExercise: Bool = false
 
     static let `default` = Exercise(session: Session.default, activity: ModelData().activities[0], name: "default", sets: 3, repetitions: 8)
     
-    private enum CodingKeys: String, CodingKey{
-        case name
+    init(id: UUID = UUID(), session: Session = Session(), activity: Activity = Activity(), name: String = "", sets: Int = 3, repetitions: Int = 8) {
+        self.id = UUID()
+        self.session = session
+        self.activity = activity
+        self.name = name
+        self.sets = sets
+        self.repetitions = repetitions
     }
     
     init(session: Session, activity: Activity, name: String, sets: Int, repetitions: Int){

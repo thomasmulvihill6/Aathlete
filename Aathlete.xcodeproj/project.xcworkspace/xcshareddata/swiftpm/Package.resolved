@@ -1,0 +1,15 @@
+{
+  "originHash" : "bdbfd488c1fb6cfe221f608f6da1aadc318422e2d5c63e4744d07d9b29d92ed1",
+  "pins" : [
+    {
+      "identity" : "codablefiles",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/egzonpllana/CodableFiles.git",
+      "state" : {
+        "revision" : "d703c77c9f1e50f3a3ab355af237e8f20641c8c9",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

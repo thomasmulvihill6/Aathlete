@@ -24,7 +24,7 @@ struct ActivityHome: View {
                     .padding(.top, 10)
             }
             
-            if modelData.showTopPicker{
+            if modelData.showTopPickerActivity{
                 Picker("", selection: $tabIndex) {
                     Text("Featured Exercises").tag(0)
                     Text("All Exercises").tag(1)

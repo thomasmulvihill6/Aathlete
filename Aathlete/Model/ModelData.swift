@@ -20,8 +20,9 @@ class ModelData: ObservableObject{
     
     var profile = Profile.default
     var config = WorkoutEditorConfig.default
-    var showTopPicker = true
-    
+    var showTopPickerActivity = true
+    var showTopPickerWorkout = true
+
     var features: [Activity] {
         assignFeaturedValue(value: true, activity: &activities[43])
         assignFeaturedValue(value: true, activity: &activities[63])

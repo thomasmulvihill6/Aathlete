@@ -36,7 +36,7 @@ struct ActivityList: View {
             .animation(.default, value: filteredActivities)
             .navigationTitle("Exercises")
             .onAppear{
-                modelData.showTopPicker = true
+                modelData.showTopPickerActivity = true
             }
         } detail:{
             Text("Select an exercise")

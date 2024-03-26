@@ -43,7 +43,7 @@ struct ActivityDetail: View {
         .navigationTitle(activity.name)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            modelData.showTopPicker = false
+            modelData.showTopPickerActivity = false
         }
         Spacer()
     }

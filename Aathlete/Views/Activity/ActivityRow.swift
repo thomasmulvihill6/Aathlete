@@ -23,7 +23,6 @@ struct ActivityRow: View {
                     .foregroundStyle(.yellow)
             }
         }
-        
     }
 }
 

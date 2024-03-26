@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ProgramHome: View {
     @Environment(ModelData.self) private var modelData
-    @State private var routine: Routine
     @State private var draftSession = Session()
-
-    init() {
-        self._routine = State(initialValue: Routine(name: "Leg Day", activities: ModelData().legDayAActivities()))
-    }
+    @State private var routine: Routine = {
+        return Routine(name: "Leg Day", activities: ModelData().legDayAActivities())
+    }()
     
-    var body: some View {   
+    var body: some View {
         // When start new session, add session instance to sessions array
         // Pass in a blank session, when done and hit save session, add it to sessions array
         // 1. create new session = Session()
@@ -35,7 +33,7 @@ struct ProgramHome: View {
             .onAppear() {
                 draftSession = Session(routine: routine)
             }
-
+            
             Text("Rest of the Week")
                 .underline()
                 .font(.title)

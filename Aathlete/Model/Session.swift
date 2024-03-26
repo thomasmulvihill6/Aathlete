@@ -15,7 +15,7 @@ class Session: Hashable, Identifiable, ObservableObject{
     var date: Date
     var exercises: [Exercise]
 
-    init(id: UUID = UUID(), routine: Routine = Routine(), name: String = "", date: Date = Date(), exercises: [Exercise] = []) {
+    init(id: UUID = UUID(), routine: Routine = Routine(), name: String = "Hello", date: Date = Date(), exercises: [Exercise] = []) {
         self.id = id
         self.routine = routine
         self.name = name
@@ -42,8 +42,10 @@ class Session: Hashable, Identifiable, ObservableObject{
     
     init(routine: Routine){
         self.routine = routine
-        self.name = ""
         self.date = Date()
+        let date = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        let dateString = "\(date.year!)-\(String(format: "%02d", date.month!))-\(String(format: "%02d", date.day!))"
+        self.name = "\(routine.name)_\(dateString)"
         self.exercises = []
         for activity in routine.activities{
             self.exercises.append(Exercise(session: self, activity: activity))

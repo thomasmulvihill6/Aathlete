@@ -32,7 +32,7 @@ struct CategoryHome: View {
                     .listRowInsets(EdgeInsets())
                 }
                 .onAppear{
-                    modelData.showTopPicker = true
+                    modelData.showTopPickerActivity = true
                 }
                 .listStyle(.inset)
                 .navigationTitle("Featured")

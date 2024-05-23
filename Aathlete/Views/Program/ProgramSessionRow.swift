@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgramSessionRow: View {
     @Binding var exercise: Exercise
-
+    
     var body: some View {
         HStack{
             Text(exercise.name)

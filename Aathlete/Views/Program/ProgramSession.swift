@@ -27,17 +27,17 @@ struct ProgramSession: View {
                 }
             }
         }
-                .toolbar{
-                    // Add a profile button in the top right corner (toolbar) , where a user can change their settings.
-                    Button {
-                        modelData.sessions.append(draftSession)
-                        self.presentationMode.wrappedValue.dismiss()
-                        // save to Session
-                        // return to programHome
-                    } label: {
-                        Label("Save", systemImage: "checkmark")
-                    }
-                }
+        .toolbar{
+            // Add a profile button in the top right corner (toolbar) , where a user can change their settings.
+            Button {
+                modelData.sessions.append(draftSession)
+                self.presentationMode.wrappedValue.dismiss()
+                // save to Session
+                // return to programHome
+            } label: {
+                Label("Save", systemImage: "checkmark")
+            }
+        }
     }
 }
 

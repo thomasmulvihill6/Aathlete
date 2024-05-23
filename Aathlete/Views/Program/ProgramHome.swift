@@ -37,14 +37,14 @@ struct ProgramHome: View {
             Text("Rest of the Week")
                 .underline()
                 .font(.title)
-
+            
             NavigationLink{
                 WeeklySplit()
             } label: {
                 WeeklySplitSummary()
                     .foregroundStyle(Color.black)
             }
-
+            
             DailyQuote()
         }
     }

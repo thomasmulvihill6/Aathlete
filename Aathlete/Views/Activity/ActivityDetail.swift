@@ -52,6 +52,6 @@ struct ActivityDetail: View {
 
 #Preview {
     let modelData = ModelData()
-    return ActivityDetail(activity: ModelData().activities[43])
+    return ActivityDetail(activity: modelData.activities[43])
         .environment(modelData)
 }

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct EditExerciseForm: View {
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var exercise: Exercise
+    @Environment(ModelData.self) private var modelData
+    @State private var isPresenting = false
     //    @State private var initName: String
     //    @State private var initSets: Int
     //    @State private var initReps: Int
@@ -28,6 +30,8 @@ struct EditExerciseForm: View {
     
     
     var body: some View {
+        let activity = modelData.getActivity(byName: exercise.name)
+        
         Text("Record Exercise")
         Form{
             Section(header: Text(exercise.name)){
@@ -71,11 +75,22 @@ struct EditExerciseForm: View {
                         .multilineTextAlignment(.trailing)
                 }
             }
-        } // End Form
-//        .navigationBarItems(trailing: Button(action: {
-//            exercise.saveExercise = true
-//            self.presentationMode.wrappedValue.dismiss()
-//        }, label: { Text("Save") }))
+        }
+        .toolbar{
+            // Add a profile button in the top right corner (toolbar) , where a user can change their settings.
+            Button("Info"){
+                isPresenting.toggle()
+            }
+            .sheet(isPresented: $isPresenting, content: {
+                ActivityDetail(activity: activity ?? modelData.activities[0])
+            })
+        }
+        
+        // End Form
+        //        .navigationBarItems(trailing: Button(action: {
+        //            exercise.saveExercise = true
+        //            self.presentationMode.wrappedValue.dismiss()
+        //        }, label: { Text("Save") }))
         //        .onDisappear {
         //            // Restore initial values if not saved
         //            if !exercise.saveExercise {
@@ -91,4 +106,5 @@ struct EditExerciseForm: View {
 
 #Preview {
     EditExerciseForm(exercise: .constant(.default))
+        .environment(ModelData())
 }

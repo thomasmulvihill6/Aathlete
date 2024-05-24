@@ -34,9 +34,13 @@
 		074493B62B97B9F4003F5D6A /* ProgramSessionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074493B52B97B9F4003F5D6A /* ProgramSessionSummary.swift */; };
 		074493B82B97BA36003F5D6A /* DailyQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074493B72B97BA36003F5D6A /* DailyQuote.swift */; };
 		0751E0502B6FFB8100B1668D /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751E04F2B6FFB8100B1668D /* FavouriteButton.swift */; };
-		0762A1C82BB356BA0095B716 /* SessionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762A1C72BB356BA0095B716 /* SessionHistory.swift */; };
 		0762A1CA2BB358B70095B716 /* WorkoutHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762A1C92BB358B70095B716 /* WorkoutHistory.swift */; };
 		0762A1CC2BB3674D0095B716 /* ProgramSessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762A1CB2BB3674D0095B716 /* ProgramSessionRow.swift */; };
+		07642FBF2C0010E70077123A /* SessionHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07642FBD2C0010E70077123A /* SessionHome.swift */; };
+		07642FC12C00112F0077123A /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07642FC02C00112F0077123A /* SessionRow.swift */; };
+		07642FC32C0011340077123A /* SessionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07642FC22C0011340077123A /* SessionDetail.swift */; };
+		07642FC52C0012A40077123A /* SessionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07642FC42C0012A40077123A /* SessionList.swift */; };
+		07642FC72C0020150077123A /* ExerciseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07642FC62C0020150077123A /* ExerciseDetail.swift */; };
 		07712BA72B72CE6F00CCD42A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07712BA62B72CE6F00CCD42A /* CategoryRow.swift */; };
 		07712BA92B72D21800CCD42A /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07712BA82B72D21800CCD42A /* CategoryItem.swift */; };
 		0775F9942B97FD1900074F8E /* ProgramExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775F9932B97FD1900074F8E /* ProgramExerciseRow.swift */; };
@@ -120,9 +124,13 @@
 		074493B52B97B9F4003F5D6A /* ProgramSessionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramSessionSummary.swift; sourceTree = "<group>"; };
 		074493B72B97BA36003F5D6A /* DailyQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuote.swift; sourceTree = "<group>"; };
 		0751E04F2B6FFB8100B1668D /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
-		0762A1C72BB356BA0095B716 /* SessionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistory.swift; sourceTree = "<group>"; };
 		0762A1C92BB358B70095B716 /* WorkoutHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistory.swift; sourceTree = "<group>"; };
 		0762A1CB2BB3674D0095B716 /* ProgramSessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramSessionRow.swift; sourceTree = "<group>"; };
+		07642FBD2C0010E70077123A /* SessionHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHome.swift; sourceTree = "<group>"; };
+		07642FC02C00112F0077123A /* SessionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
+		07642FC22C0011340077123A /* SessionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetail.swift; sourceTree = "<group>"; };
+		07642FC42C0012A40077123A /* SessionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionList.swift; sourceTree = "<group>"; };
+		07642FC62C0020150077123A /* ExerciseDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetail.swift; sourceTree = "<group>"; };
 		07712BA62B72CE6F00CCD42A /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		07712BA82B72D21800CCD42A /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		0775F9932B97FD1900074F8E /* ProgramExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramExerciseRow.swift; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 				077B16B92B890DB600B7C607 /* PageView */,
 				07346B0E2B7C00B5009DE842 /* Profiles */,
 				074493AA2B97AFC5003F5D6A /* Program */,
+				07642FBE2C0010E70077123A /* Sessions */,
 				07AB2EA52B8EB5000014EE4B /* Settings */,
 				07346B1E2B7C0A67009DE842 /* Workouts */,
 			);
@@ -282,7 +291,6 @@
 				0775F9972B98088700074F8E /* EditExerciseForm.swift */,
 				074493B32B97B9E3003F5D6A /* WeeklySplitSummary.swift */,
 				074493AF2B97B884003F5D6A /* WeeklySplit.swift */,
-				0762A1C72BB356BA0095B716 /* SessionHistory.swift */,
 			);
 			path = Program;
 			sourceTree = "<group>";
@@ -308,6 +316,18 @@
 				077B16C82B894F4C00B7C607 /* AssignDefaultImage.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		07642FBE2C0010E70077123A /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				07642FBD2C0010E70077123A /* SessionHome.swift */,
+				07642FC42C0012A40077123A /* SessionList.swift */,
+				07642FC02C00112F0077123A /* SessionRow.swift */,
+				07642FC22C0011340077123A /* SessionDetail.swift */,
+				07642FC62C0020150077123A /* ExerciseDetail.swift */,
+			);
+			path = Sessions;
 			sourceTree = "<group>";
 		};
 		07712BA52B72CE5600CCD42A /* Category */ = {
@@ -578,13 +598,15 @@
 				077B16BB2B890DE300B7C607 /* PageViewController.swift in Sources */,
 				077B16D52B8A909700B7C607 /* WorkoutAdd.swift in Sources */,
 				077B16B62B88619400B7C607 /* AssignFeatured.swift in Sources */,
+				07642FC32C0011340077123A /* SessionDetail.swift in Sources */,
 				0711924E2BAA195500A7063E /* Aathlete.xcdatamodeld in Sources */,
 				074493B22B97B992003F5D6A /* ProgramSession.swift in Sources */,
+				07642FC72C0020150077123A /* ExerciseDetail.swift in Sources */,
+				07642FBF2C0010E70077123A /* SessionHome.swift in Sources */,
 				074493B42B97B9E3003F5D6A /* WeeklySplitSummary.swift in Sources */,
 				074493B62B97B9F4003F5D6A /* ProgramSessionSummary.swift in Sources */,
 				074493AE2B97B3BB003F5D6A /* Routine.swift in Sources */,
 				071E56ED2B6087CA00C26642 /* CategoryHome.swift in Sources */,
-				0762A1C82BB356BA0095B716 /* SessionHistory.swift in Sources */,
 				077B16B02B8843E600B7C607 /* GraphCapsule.swift in Sources */,
 				0775F9962B97FFC600074F8E /* CompleteButton.swift in Sources */,
 				077B16D72B8A91AC00B7C607 /* WorkoutEditorConfig.swift in Sources */,
@@ -593,8 +615,10 @@
 				077B16DC2B8A9EE300B7C607 /* WorkoutData.swift in Sources */,
 				077B16AA2B88349900B7C607 /* workoutOld.swift in Sources */,
 				07346B122B7C012D009DE842 /* ProfileSummary.swift in Sources */,
+				07642FC52C0012A40077123A /* SessionList.swift in Sources */,
 				0775F9942B97FD1900074F8E /* ProgramExerciseRow.swift in Sources */,
 				070F96072B6FFEF900514C32 /* ActivityRow.swift in Sources */,
+				07642FC12C00112F0077123A /* SessionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

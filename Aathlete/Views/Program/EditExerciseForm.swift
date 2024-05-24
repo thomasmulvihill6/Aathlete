@@ -78,7 +78,7 @@ struct EditExerciseForm: View {
         }
         .toolbar{
             // Add a profile button in the top right corner (toolbar) , where a user can change their settings.
-            Button("Info"){
+            Button("More Info"){
                 isPresenting.toggle()
             }
             .sheet(isPresented: $isPresenting, content: {

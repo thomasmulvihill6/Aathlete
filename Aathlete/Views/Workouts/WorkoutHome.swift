@@ -20,7 +20,7 @@ struct WorkoutHome: View {
                     .environment(workoutData)
                     .padding(.top, 10)
             } else {
-                SessionHistory()
+                SessionHome()
                     .environment(modelData)
                     .padding(.top, 10)
             }

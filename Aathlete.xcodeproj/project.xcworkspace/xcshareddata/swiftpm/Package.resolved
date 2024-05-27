@@ -1,5 +1,5 @@
 {
-  "originHash" : "bdbfd488c1fb6cfe221f608f6da1aadc318422e2d5c63e4744d07d9b29d92ed1",
+  "originHash" : "bd54e4ead45c489f52e05fc0ff896536a8fa3a34b39fe1bbe8f6c1b8e989463e",
   "pins" : [
     {
       "identity" : "codablefiles",
@@ -8,6 +8,24 @@
       "state" : {
         "revision" : "d703c77c9f1e50f3a3ab355af237e8f20641c8c9",
         "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "dategrid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yodagamaheshan/DateGrid.git",
+      "state" : {
+        "revision" : "68378c8276f2d57569fa492188e1d098ea56869b",
+        "version" : "0.0.3"
+      }
+    },
+    {
+      "identity" : "swiftuicalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GGJJack/SwiftUICalendar",
+      "state" : {
+        "revision" : "7ecd220909bc25529e35e2addb513a20abbfec82",
+        "version" : "0.1.14"
       }
     }
   ],
